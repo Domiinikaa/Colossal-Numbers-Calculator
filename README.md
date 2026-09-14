@@ -31,12 +31,4 @@ The calculator reads instructions from standard input (character by character):
 | `+` | **Add:** Pops two values, calculates their sum, and pushes the normalized result. |
 | `*` | **Multiply:** Pops two values, calculates their product, and pushes the normalized result. |
 
-## Build Instructions
 
-The project strictly adheres to the C23 standard and should be compiled with GCC using rigorous warning and memory sanitization flags to ensure safety.
-
-```bash
-gcc -std=c23 -pedantic -Wall -Wextra -Wformat-security -Wduplicated-cond \
--Wfloat-equal -Wshadow -Wconversion -Wjump-misses-init -Wlogical-not-parentheses \
--Wnull-dereference -Wvla -Werror -fstack-protector-strong -fsanitize=undefined \
--fno-sanitize-recover -g -fno-omit-frame-pointer -O1 colossal.c -o colossal
